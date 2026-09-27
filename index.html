@@ -1338,6 +1338,26 @@
         transform: rotate(360deg);
       }
     }
+
+    .date-text-group {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    @media (max-width: 580px) {
+      .date-text-group {
+        flex-direction: column;
+        gap: 2px;
+        line-height: 1.2;
+      }
+      .date-dot {
+        display: none;
+      }
+      .hero-date {
+        border-radius: 16px !important;
+        padding: 10px 22px !important;
+      }
+    }
   </style>
 </head>
 <body class="modal-open">
@@ -1405,7 +1425,11 @@
       </p>
 <div class="hero-date">
 <i data-lucide="calendar-days"></i>
-        Sábado 20 de octubre de 2026 · 9:00 PM
+        <span class="date-text-group">
+          <span>Sábado 20 de octubre de 2026</span>
+          <span class="date-dot"> · </span>
+          <span>9:00 PM</span>
+        </span>
       </div>
 <div class="hero-actions">
 <a class="btn btn-primary" href="#rsvp">
